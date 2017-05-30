@@ -7,9 +7,9 @@
  */
 
 $update=json_decode(file_get_contents("php://input"));
-$token="YourBotToken";
-$thisFileUrl="http://example.com/path/to/bot.php"; //SET YOUR URL
-$FilesCh="destCh"; // enter a channel to download files without @
+$token="293487603:AAGzq8OwHdFkMhfjOzLBIA6L2OFV0NH4Kf8";
+$thisFileUrl="=https://cgplot.com/dd/bot.php"; //SET YOUR URL
+$FilesCh="AFDownloads"; // enter a channel to download files without @
 
 require ("core/telegramhelper.php");
 require ("core/InlineKeyBoardMarkUp.php");
@@ -171,7 +171,7 @@ if (false){
 if (isset($update->inline_query)){
     $InId=$update->inline_query->id;
    $FromId= $update->inline_query->from->id;
-    if ($FromId==129377043||$FromId==156108793){
+    if ($FromId==113566842||$FromId==65761134){
         $url=$update->inline_query->query;
         $resId=md5($url);
        $res= $Tl->makeHTTPRequest("answerInlineQuery",['inline_query_id'=>$InId,'is_personal'=>true,'results'=>json_encode([
